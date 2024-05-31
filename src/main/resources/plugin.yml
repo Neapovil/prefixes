@@ -6,6 +6,13 @@ author: Neapovil
 website: https://github.com/Neapovil/prefixes
 depend:
   - CommandAPI
+  - Core
 permissions:
-  prefixes.command:
+  prefixes.command.select:
+    default: true
+  prefixes.command.toggleOff:
+    default: true
+  prefixes.command.create:
+    default: op
+  prefixes.command.delete:
     default: op
