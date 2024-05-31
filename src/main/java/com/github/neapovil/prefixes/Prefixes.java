@@ -13,6 +13,7 @@ import org.bukkit.scoreboard.Team;
 import com.github.neapovil.core.Core;
 import com.github.neapovil.prefixes.command.CreateCommand;
 import com.github.neapovil.prefixes.command.DeleteCommand;
+import com.github.neapovil.prefixes.command.ModifyCommand;
 import com.github.neapovil.prefixes.command.SelectCommand;
 import com.github.neapovil.prefixes.command.ToggleCommand;
 import com.github.neapovil.prefixes.listener.PrefixesListener;
@@ -44,6 +45,7 @@ public final class Prefixes extends JavaPlugin
             new ToggleCommand().register();
             new CreateCommand().register();
             new DeleteCommand().register();
+            new ModifyCommand().register();
 
             this.getServer().getPluginManager().registerEvents(new PrefixesListener(), this);
 

@@ -6,6 +6,7 @@ import dev.jorel.commandapi.CommandAPI;
 import dev.jorel.commandapi.CommandAPICommand;
 import dev.jorel.commandapi.arguments.LiteralArgument;
 import dev.jorel.commandapi.arguments.StringArgument;
+import dev.jorel.commandapi.arguments.TextArgument;
 
 public final class CreateCommand extends AbstractCommand
 {
@@ -16,7 +17,7 @@ public final class CreateCommand extends AbstractCommand
                 .withPermission("prefixes.command.create")
                 .withArguments(new LiteralArgument("create"))
                 .withArguments(new StringArgument("name"))
-                .withArguments(new StringArgument("prefix"))
+                .withArguments(new TextArgument("prefix"))
                 .executesPlayer((player, args) -> {
                     final String name = (String) args.get("name");
                     final String prefix = (String) args.get("prefix");
